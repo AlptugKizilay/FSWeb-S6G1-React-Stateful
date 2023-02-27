@@ -14,7 +14,7 @@ Herhangi bir noktada yalnızca bir kare aktif olabilir (ya da hiçbiri)
 Aşaıdaki yorumları takip edin.
 */
 
-import React from 'react';
+import React, {useState} from 'react';
 
 
 //Bu değişkeni YALNIZCA bir durum dilimini yüklemek için kullanın!
@@ -27,6 +27,9 @@ export default function Kareler() {
   // 'aktifKare' olmak üzere. Birisi kare idlerini _dizi_ olarak tutacak, diğeri ise aktif olan
   // kareyi gözlemleyecek. Sayfa yüklendiğinde aktif kare olmayacak,
   // yani  'aktifKare' null olmalı.
+  
+  const [kareler, setKareler] = useState();
+  const [aktifKare, setAktifKare] = useState(null);
 	
   const ClassAdiAl = id => {
     // Bu bir click handler değildir, JSX içinde kullanılan bir yardımcıdır(helper).(aşağıya bakın)
